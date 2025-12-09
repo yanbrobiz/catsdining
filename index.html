@@ -68,16 +68,26 @@
                 </select>
             </div>
 
+            <div class="form-group">
+                <label for="foodPreference">飲食偏好</label>
+                <select id="foodPreference" required>
+                    <option value="">請選擇飲食偏好</option>
+                    <option value="both">都吃（罐頭+飼料）</option>
+                    <option value="dryOnly">只吃飼料</option>
+                    <option value="wetOnly">只吃罐頭</option>
+                </select>
+            </div>
+
             <button type="submit">計算建議份量 🍽️</button>
         </form>
 
         <div id="results" class="results">
             <h2>📊 每日建議攝取量</h2>
-            <div class="result-item">
+            <div class="result-item" id="cannedFoodItem">
                 <span class="result-label">🥫 罐頭（濕食）</span>
                 <span class="result-value" id="cannedFood">-</span>
             </div>
-            <div class="result-item">
+            <div class="result-item" id="dryFoodItem">
                 <span class="result-label">🍚 飼料（乾食）</span>
                 <span class="result-value" id="dryFood">-</span>
             </div>
@@ -89,8 +99,8 @@
                 <span class="result-label">🔥 每日熱量需求</span>
                 <span class="result-value" id="calories">-</span>
             </div>
-            <div class="result-item">
-                <span class="result-label">🍽️ 每餐份量（飼料）</span>
+            <div class="result-item" id="perMealItem">
+                <span class="result-label">🍽️ 每餐份量</span>
                 <span class="result-value" id="perMeal">-</span>
             </div>
             <div class="note">
